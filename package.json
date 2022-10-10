@@ -18,7 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"json-server --watch db.json --port 3087\"",
     "dev": "concurrently \"yarn start\" \"json-server --watch db.json --port 3087\"",
     "ndev": "concurrently \"npm start\" \"json-server --watch db.json --port 3087\"",
     "build": "react-scripts build",

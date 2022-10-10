@@ -7,7 +7,7 @@ const Navmenu = () => {
       <div className="w-ful h-16 flex items-center px-14 justify-between bg-teal-600">
         <Link
           to={'/'}
-          className="text-3xl text-teal-200 font-semibold font-Montesarrat"
+          className="text-2xl text-teal-200 font-semibold font-Montesarrat"
         >
           React18-Tailwind-CRUD
         </Link>

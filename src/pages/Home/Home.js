@@ -45,9 +45,11 @@ const Home = () => {
   };
 
   const editClick = (eData) => {
-    navigate(`/edit/user/${eData.id}`, {
-      state: { singleUser: eData },
-    });
+    if (window.confirm('Do you want to edit?')) {
+      navigate(`/edit/user/${eData.id}`, {
+        state: { singleUser: eData },
+      });
+    }
   };
 
   const deleteUser = (uId) => {
