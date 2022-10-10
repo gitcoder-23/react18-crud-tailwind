@@ -44,13 +44,30 @@ const Home = () => {
     });
   };
 
+  const deleteUser = (uId) => {
+    console.log(uId);
+
+    if (window.confirm('Do you want?')) {
+      axios
+        .delete(`${rootApi}/users/${uId}`)
+        .then((dData) => {
+          console.log(dData);
+          loadAllUsers();
+        })
+        .catch((err) => {
+          console.log(err);
+          loadAllUsers();
+        });
+    }
+  };
+
   return (
     <>
       <div className="w-full h-full flex flex-col px-14 py-8">
         <div className="w-full flex flex-col min-h-[50vh] justify-center ">
-          {/* <h1 className="text-3xl text-black-200 font-semibold font-Montesarrat text-center">
-                Home Page
-              </h1> */}
+          <h1 className="text-3xl text-black-200 font-semibold font-Montesarrat text-center">
+            No. of user- {allUsers?.data?.length}
+          </h1>
           {isLoading ? (
             <h1 className="text-3xl text-black-200 font-semibold font-Montesarrat text-center">
               Loadng...
@@ -128,7 +145,10 @@ const Home = () => {
                               <button className="px-6 py-2 text-white bg-blue-600 hover:bg-blue-400 ease-in-out duration-500 rounded-lg">
                                 Edit
                               </button>
-                              <button className="px-6 py-2 text-white bg-red-600 hover:bg-red-400 ease-in-out duration-500 rounded-lg">
+                              <button
+                                onClick={() => deleteUser(uData.id)}
+                                className="px-6 py-2 text-white bg-red-600 hover:bg-red-400 ease-in-out duration-500 rounded-lg"
+                              >
                                 Delete
                               </button>
                             </td>
