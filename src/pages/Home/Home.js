@@ -14,14 +14,14 @@ const Home = () => {
     axios
       .get(`${rootApi}/users`)
       .then((res) => {
-        // console.log('res->', res);
+        console.log('res->', res.data.reverse());
         if (res.status === 200) {
           if (res.data.length === 0) {
             setIsLoading(false);
             setMessage('No Data Found!');
           } else {
             setIsLoading(false);
-            setAllUsers(res.data);
+            setAllUsers(res);
           }
         }
       })
@@ -102,7 +102,7 @@ const Home = () => {
                       </tr>
                     </thead>
                     {allUsers &&
-                      allUsers.reverse().map((uData, indx) => (
+                      allUsers?.data.reverse().map((uData, indx) => (
                         <tbody key={indx}>
                           {/* <tr className="bg-white border-b"> */}
                           <tr className="bg-white">
