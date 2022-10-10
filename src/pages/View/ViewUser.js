@@ -5,7 +5,7 @@ import { rootApi } from '../../constants';
 
 const ViewUser = () => {
   const { state } = useLocation();
-  console.log('View-sData=>', state?.singleUser);
+  // console.log('View-sData=>', state?.singleUser);
   const { vid } = useParams();
 
   // const getOneUser = async () => {

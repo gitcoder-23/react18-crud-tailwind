@@ -44,6 +44,12 @@ const Home = () => {
     });
   };
 
+  const editClick = (eData) => {
+    navigate(`/edit/user/${eData.id}`, {
+      state: { singleUser: eData },
+    });
+  };
+
   const deleteUser = (uId) => {
     console.log(uId);
 
@@ -142,7 +148,10 @@ const Home = () => {
                               >
                                 View
                               </button>
-                              <button className="px-6 py-2 text-white bg-blue-600 hover:bg-blue-400 ease-in-out duration-500 rounded-lg">
+                              <button
+                                onClick={() => editClick(uData)}
+                                className="px-6 py-2 text-white bg-blue-600 hover:bg-blue-400 ease-in-out duration-500 rounded-lg"
+                              >
                                 Edit
                               </button>
                               <button

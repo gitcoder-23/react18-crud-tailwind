@@ -116,10 +116,10 @@
       }
     },
     {
-      "name": "Curt Hendricks",
-      "email": "cobolt@codename.com",
-      "phone": "0000-22-0000",
-      "id": 8
+      "id": 8,
+      "name": "Michel Shene",
+      "email": "mike@codename.com",
+      "phone": "7894-5284-12"
     },
     {
       "id": "ac8cd21a-cf33-4f7c-a7af-7b791b8c8f1d",
@@ -129,9 +129,9 @@
     },
     {
       "id": "1b7625c1-2fd4-4faa-9cc0-795a68c20554",
-      "name": "Rammohan Ray",
-      "email": "mohan@gmail.com",
-      "phone": "78945685741"
+      "name": "Ram Mohan Ray",
+      "email": "rmohan@gmail.com",
+      "phone": "98945685741"
     }
   ]
 }
